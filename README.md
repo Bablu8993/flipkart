@@ -148,6 +148,23 @@ In body of request( for example )
 			}
 		 ]
 	  }
+	  
+See all items in kart
+	
+	get localhost:3002/karts
+
+Will get response like this
+		
+		[
+		    {
+			"item": "Usha Fan",
+			"price": 2700,
+			"quantity": 2,
+			"total_price_to_pary": 5400,
+			"expected_delivery_date": "from today is 2019-02-17 07:47:11 UTC"
+		    }
+		]
+		
 * How to order 
 	
 	  POST localhost:3002/order/create
