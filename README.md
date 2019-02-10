@@ -14,7 +14,7 @@ application up and running.
       rake db:crete
       rake db:migrate
       rake db:seed {For admin user creation}
-
+    
 * 
 
 * Database initialization
