@@ -54,13 +54,19 @@ application up and running.
 
 * How to use user token for login in application 
     
-      get localhost:3002/auth  
+      get localhost:3002/auth
       
    In header of postman 
    
       key: Content-Type           value: application/json
       key: Authorization          value: Bearer token_of_user
-  
+
+* You will get 
+          
+      {
+          "status": 200,
+          "msg": "You are currently Logged-in as admin_user"
+      }  
 
 * How to create categories(only admin user can create)
     
@@ -79,6 +85,34 @@ application up and running.
 * How to see all category
 
        get localhost:3002/categories 
+       
+  You will get(for example)
+  
+          [
+              {
+                  "category_name": "Electronics",
+                  "quantity": 30
+              },
+              {
+                  "category_name": "name of category",
+                  "quantity": 30
+              }
+
+          ]
+
+* Creating new item 
+
+      POST localhost:3002/item/create
+  in body
+  
+          {
+          	"item":{
+		"category_name":"category_name",
+		"name":"name of item",
+		"price":price of item in float,
+		"quantity":no. of item u wnat to create
+	          }
+          }
 
 * Deployment instructions
 
