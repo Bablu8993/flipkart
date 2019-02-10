@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190209131919) do
+ActiveRecord::Schema.define(version: 20190210053551) do
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "category_name"
@@ -32,21 +32,21 @@ ActiveRecord::Schema.define(version: 20190209131919) do
   create_table "karts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "quantity"
     t.bigint "user_id"
-    t.bigint "item_id"
+    t.string "item"
+    t.float "price", limit: 24
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["item_id"], name: "index_karts_on_item_id"
     t.index ["user_id"], name: "index_karts_on_user_id"
   end
 
   create_table "orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "order_no"
-    t.bigint "item_id"
+    t.string "item"
+    t.float "price", limit: 24
     t.integer "quantity"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["item_id"], name: "index_orders_on_item_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
@@ -62,8 +62,6 @@ ActiveRecord::Schema.define(version: 20190209131919) do
   end
 
   add_foreign_key "items", "categories"
-  add_foreign_key "karts", "items"
   add_foreign_key "karts", "users"
-  add_foreign_key "orders", "items"
   add_foreign_key "orders", "users"
 end

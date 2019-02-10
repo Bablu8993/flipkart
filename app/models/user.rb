@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # Necessary to authenticate.
   has_secure_password
   has_many :karts
+  has_many :orders
   
   # Basic password validation, configure to your liking.
   # validates :role

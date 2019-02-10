@@ -3,9 +3,11 @@
 one:
   quantity: 1
   user: one
-  item: one
+  item: MyString
+  price: 1.5
 
 two:
   quantity: 1
   user: two
-  item: two
+  item: MyString
+  price: 1.5

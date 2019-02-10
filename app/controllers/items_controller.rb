@@ -6,7 +6,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @category = Category.find_by(category_name: params['category_name'])
+    @category = Category.find_by(category_name: params["item"]["category_name"])
     @item = @category.items.new(item_params)
     if @item.validate
       @item.save

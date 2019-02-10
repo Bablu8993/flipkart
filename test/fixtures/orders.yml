@@ -2,12 +2,14 @@
 
 one:
   order_no: MyString
-  item: one
+  item: MyString
+  price: 1.5
   quantity: 1
   user: one
 
 two:
   order_no: MyString
-  item: two
+  item: MyString
+  price: 1.5
   quantity: 1
   user: two

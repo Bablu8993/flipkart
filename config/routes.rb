@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   post  '/category/create' =>'categories#create'
   get '/categories' => 'categories#index'
   get '/items' => 'items#index'
+  post '/order' => 'orders#create'
+  get '/orders' => 'orders#index'
+
+  post '/kart' => 'karts#create'
+  get '/karts' => 'karts#index'
 
   post  '/item/create' =>'items#create'
 
