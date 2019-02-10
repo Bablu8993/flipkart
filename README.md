@@ -14,6 +14,11 @@ application up and running.
       rake db:crete
       rake db:migrate
       rake db:seed {For admin user creation}
+      
+* Admin user deails
+    
+         email: admin@example.com
+         password:"password"
     
 * To create normal user
 
