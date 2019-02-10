@@ -15,7 +15,7 @@ application up and running.
     1. git clone https://github.com/Bablu8993/flipkart.git
     2. go to folder in wich you clone the application and run
     
-      rake db:crete
+      rake db:create
       rake db:migrate
       rake db:seed {For admin user creation}
       
