@@ -19,7 +19,7 @@ application up and running.
       rake db:migrate
       rake db:seed {For admin user creation}
       
-* Admin user deails
+* Admin user details
     
          email: admin@example.com
          password:"password"
