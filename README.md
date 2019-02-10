@@ -81,6 +81,7 @@ application up and running.
         }
       }
       
+* NOTE Use corrent category, item name while creating ordering kartin        
 
 * How to see all category
 
@@ -114,7 +115,79 @@ application up and running.
 	          }
           }
 
-* Deployment instructions
+* how to see all items 
+	
+	  gem localhost:3002/items
+	  
+  You will gem response like this
+  	
+		[
+		    {
+			"items_category_wise": {
+			    "item_name": "Usha Fan",
+			    "category_name": "Electronics",
+			    "quantity": 20,
+			    "price": "Rs. 2700.0",
+			    "arrived in stock": "3 minutes ago"
+			}
+		    }
+		]
+
+* How to add item in your kart
+	
+	  POST localhost:3002/kart
+	  
+In body of request( for example )
+	  
+	  {
+		"karts":[
+			{
+			    "ref_id": 1,
+			    "name":"name of item",
+			    "quantity": no. of quantity you want to order
+			}
+		 ]
+	  }
+* How to order 
+	
+	  POST localhost:3002/order/create
+	  
+In request body	  
+
+	  {
+		"orders":[
+		   {
+		        "ref_id": 1,
+			"name":"Usha Fan",
+			"quantity":2
+		   }
+		 ]
+	 }
+
+* how to see your all orders
+		
+		get localhost:3002/orders
+		
+You wil see the response like
+	
+	[
+	    {
+		"order_no": "8cacf7da2f6f5f1453c88d4f09ff7d83",
+		"item": "Usha Fan",
+		"price": 2700,
+		"quantity": 2,
+		"total_cost": 5400,
+		"order_date": "2 minutes ago",
+		"delivery_status": "will be delivered on  2019-02-17 07:53:35 UTC"
+	    }
+	]
+	  
+	  
+	
+	
+	
+	
+	
 
 * ...
 
