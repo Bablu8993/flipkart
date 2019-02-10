@@ -15,7 +15,34 @@ application up and running.
       rake db:migrate
       rake db:seed {For admin user creation}
     
-* 
+* How to get tocken for admin user
+  We are using postman for testing api
+  
+      POST localhost:3002/user_token
+    
+  in Body
+      
+      {
+        "auth":
+          {
+            "email":"admin@example.com",
+            "passowrd":"password"
+          }
+      }
+* To create normal user
+
+        POST localhost:3002/users/create
+        
+  in body of postman (For example)     
+  
+          {
+            "user":
+              {
+                "username":"Electronics_12",
+                "email":"user_1@gmail.com",
+                "password":"1234567890"
+              }
+          }
 
 * Database initialization
 
