@@ -5,10 +5,14 @@ application up and running.
 * Ruby version 2.5.1
 * Rails version 5.1.0
 
-* System dependencies
-
 * Make clone of application in your local machine
-  git clone 
+  run the following command in terminal
+    
+    1. git clone https://github.com/Bablu8993/flipkart.git
+    2. go to folder in wich you clone the application and run
+      rake db:crete
+      rake db:migrate
+      rake db:seed {For admin user creation}
 
 * 
 
