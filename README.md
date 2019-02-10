@@ -5,6 +5,10 @@ application up and running.
 * Ruby version 2.5.1
 * Rails version 5.1.0
 
+* We are running our rails server on 
+
+          localhost:3002
+          
 * Make clone of application in your local machine
   run the following command in terminal
     
@@ -22,7 +26,7 @@ application up and running.
     
 * To create normal user
 
-        POST localhost:3002/users/create
+        POST localhost:3002/users/create 
         
   in body of postman (For example)     
   
@@ -38,8 +42,7 @@ application up and running.
   
       POST localhost:3002/user_token
       
-    
-  in body (example parameter)
+    in body (example parameter)
       
       {
         "auth":
@@ -49,11 +52,33 @@ application up and running.
           }
       }          
 
-* Database initialization
+* How to use user token for login in application 
+    
+      get localhost:3002/auth  
+      
+   In header of postman 
+   
+      key: Content-Type           value: application/json
+      key: Authorization          value: Bearer token_of_user
+  
 
-* How to run the test suite
+* How to create categories(only admin user can create)
+    
+      POST localhost:3002/category/create
+      
+  example parameter    
+  
+      {
+        "category":{
+                  "category_name" : "name of category",
+                  "quantity" : number of items in category
+        }
+      }
+      
 
-* Services (job queues, cache servers, search engines, etc.)
+* How to see all category
+
+       get localhost:3002/categories 
 
 * Deployment instructions
 
